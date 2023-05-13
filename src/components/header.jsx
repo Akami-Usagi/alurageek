@@ -11,11 +11,16 @@ export default function Header() {
         height: 150px;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-around;
+    `
+
+    const StartDiv = styled.div`
+        display: flex;
+        column-gap: 10px;
     `
 
     const HeaderImg = styled.img`
-        height: 50px;
+        height: 40px;
     `
 
     const Searchbar = styled.div`
@@ -27,7 +32,7 @@ export default function Header() {
         background-color: ${searchBarbackground};
         border-radius: 20px;
         padding: 0 20px;
-        margin-left: -350px;
+        
     `
 
     const SearchInput = styled.input`
@@ -64,12 +69,14 @@ export default function Header() {
 
     return (
         <HeaderBox>
-
-            <HeaderImg src="/img/alurageek_logo.svg" alt="scarlet"/>
-            <Searchbar>
-                <SearchInput placeholder="Que deseas buscar?"></SearchInput>
-                <SearchIcon/>
-            </Searchbar>
+            <StartDiv>
+                <HeaderImg src="/img/alurageek_logo.svg" alt="scarlet"/>
+                <Searchbar>
+                    <SearchInput placeholder="Que deseas buscar?"></SearchInput>
+                    <SearchIcon/>
+                </Searchbar>
+            </StartDiv>
+            
             <LoginButton>Login</LoginButton>
         </HeaderBox>
     )
