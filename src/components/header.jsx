@@ -8,7 +8,7 @@ export default function Header() {
 
     const HeaderBox = styled.div`
         width: 100%;
-        height: 150px;
+        height: 100px;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -64,6 +64,7 @@ export default function Header() {
             transition: 300ms ease-in-out;
             background-color: ${accentBlue};
             color: white;
+            cursor: pointer;
         }
     `
 

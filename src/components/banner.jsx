@@ -7,32 +7,27 @@ export default function Banner () {
 
     const Banner = styled.div`
         width: 100%;
-        height: 400px;
-        background: url("/img/scarlet.jpeg");
+        height: 500px;
+        background: url("/img/nikke_banner.jpg") no-repeat;
         filter: brightness(40%);
-        position: fixed;
-        left: 0;
-        right: 0;
+        position: relative;
         z-index: 1;
-        display: block;
+        
         
 
     `
 
     const ContentDiv = styled.div`
-        position: fixed;
-        width: 100%;
-        height: 400px;
-        left: 0;
-        right: 0;
-        z-index: 9999;
+        position: absolute;
+        top: 250px;
+        z-index: 2;
         margin-left: 9rem;
         margin-right: 20px;
         display: flex;
         flex-direction: column;
         align-items: baseline;
         justify-content: center;
-        margin-bottom: 2rem;
+        
     `
 
     const LoginButton = styled.button`
@@ -48,8 +43,10 @@ export default function Banner () {
         transition: 300ms;
         &:hover{
             transition: 300ms ease-in-out;
-            background-color: ${accentBlue};
-            color: white;
+            background-color: white;
+            color: ${accentBlue};
+            border: none;
+            cursor: pointer;
         }
 `
     const BannerTitle = styled.h1`
@@ -66,14 +63,14 @@ export default function Banner () {
     `
 
     return (
-        <div>
+        <section>
         <Banner></Banner>
             <ContentDiv>
-                <BannerTitle>Mayo Promocional</BannerTitle>
+                <BannerTitle>Promociones Mayo</BannerTitle>
                 <BannerText>Productos seleccionados con hasta el 30% de descuento</BannerText>
-                <LoginButton>Ver Waifus</LoginButton>
+                <LoginButton>Ver Ofertas</LoginButton>
             </ContentDiv>
         
-        </div>
+        </section>
     )
 }
