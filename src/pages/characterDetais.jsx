@@ -13,7 +13,7 @@ const MainDiv = styled.div`
     flex-direction: column;
     margin: 1rem;
     align-items: center;
-    background-color: ${searchBarbackground};
+    
 `
 
 const Title = styled.h1`

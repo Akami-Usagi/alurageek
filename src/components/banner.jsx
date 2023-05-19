@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components"
+import { Link } from "react-router-dom";
 import { accentBlue } from "../AppColors";
 
 
@@ -34,6 +35,10 @@ export default function Banner () {
         @media (max-width: 570px){
             margin: 2rem;
             top: 170px
+        }
+        @media (max-width: 370px){
+            margin: 2rem;
+            top: 60px
         }
 
     `
@@ -77,9 +82,9 @@ export default function Banner () {
         <section>
         <Banner></Banner>
             <ContentDiv>
-                <BannerTitle>Promociones Mayo</BannerTitle>
+                <BannerTitle>Waifu Market Mayo</BannerTitle>
                 <BannerText>Productos seleccionados con hasta el 30% de descuento</BannerText>
-                <LoginButton>Ver Ofertas</LoginButton>
+                <Link to={"/more"}><LoginButton>Ver Mas</LoginButton></Link>
             </ContentDiv>
         
         </section>
