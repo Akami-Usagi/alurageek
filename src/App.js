@@ -11,13 +11,15 @@ function App() {
 
   const [charData, setCharData] = useState({})
 
+  const Data = JSON.parse(localStorage.getItem("personaje"))
+
   
   return (
     <Router>
       <Header/>
       <Routes>
         <Route path='/' element={<MainPage setCharData={setCharData}/>} />
-        <Route path={`/${charData.nombre}`} element={<CharacterDetails charData={charData}/>} />
+        <Route path={`/${Data.nombre}`} element={<CharacterDetails charData={Data}/>} />
         <Route path='/more' element={<SeeMore/>} />
       </Routes>
       <Footer/>
