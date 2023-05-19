@@ -32,6 +32,12 @@ export default function Header() {
         background-color: ${searchBarbackground};
         border-radius: 20px;
         padding: 0 20px;
+        @media (max-width: 850px){
+            width: 200px;
+        }
+        @media (max-width: 570px){
+            display: none;
+        }
         
     `
 

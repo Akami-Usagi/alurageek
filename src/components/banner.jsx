@@ -10,10 +10,8 @@ export default function Banner () {
         height: 500px;
         background: url("/img/nikke_banner.jpg") no-repeat;
         filter: brightness(40%);
-        position: relative;
         z-index: 1;
-        
-        
+           
 
     `
 
@@ -27,7 +25,17 @@ export default function Banner () {
         flex-direction: column;
         align-items: baseline;
         justify-content: center;
+
+        @media (max-width: 900px){
+            margin: 2rem;
+            top: 200px
+        }
         
+        @media (max-width: 570px){
+            margin: 2rem;
+            top: 170px
+        }
+
     `
 
     const LoginButton = styled.button`
@@ -54,6 +62,9 @@ export default function Banner () {
         font-weight: bolder;
         font-size: 4rem;
         margin-bottom: -0.3rem;
+        @media (max-width: 570px){
+            font-size: 3rem;
+        }
     `
 
     const BannerText = styled.h3`

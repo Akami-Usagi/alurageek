@@ -1,9 +1,9 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 import { accentBlue } from "../AppColors";
 
-export default function CharacterCard({imagen, nombre, rol}){
+export default function CharacterCard({imagen, nombre, rol, backstory, setCharData}){
     
     
 
@@ -14,10 +14,14 @@ export default function CharacterCard({imagen, nombre, rol}){
         background-color: gray;
         border-radius: 15px;
         box-shadow: 10px 10px 15px rgba(0,0,0, 0.5);
+        @media (max-width: 450px){
+            width: 90%;
+        }
 
     `
     const CharacterImg = styled.img`
         width: 200px;
+        border-radius: 15px 0 0 15px;
 
     `
 
@@ -29,13 +33,15 @@ export default function CharacterCard({imagen, nombre, rol}){
         width: 100px;
         
         background-color: ${accentBlue};
-        border: 2px solid;
-        border-color: ${accentBlue};
+        border: none;
         color: white;
         font-family: 'Exo 2', sans-serif;
         font-weight: bold;
         font-size: medium;
         transition: 300ms;
+        margin-top: 50px;
+        border-radius: 5px;
+        padding: 5px;
         &:hover{
             transition: 300ms ease-in-out;
             background-color: white;
@@ -65,7 +71,7 @@ export default function CharacterCard({imagen, nombre, rol}){
             <CharacterInfo>
                 <CharacterTitle>{nombre}</CharacterTitle>
                 <CharacterText>{rol}</CharacterText>
-                <DetailsButton>Detalles</DetailsButton>
+                <Link to={`/${nombre}`}><DetailsButton onClick={() => setCharData({nombre, imagen, rol, backstory})}>Detalles</DetailsButton></Link>
             </CharacterInfo>
         </CharacterBox>
     )
