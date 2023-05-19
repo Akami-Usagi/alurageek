@@ -1,9 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import { accentBlue} from "../AppColors"; 
 
 export default function CharacterDetails ({charData}){
+
+    let navigate = useNavigate();
     
 
     const MainDiv = styled.div`
@@ -98,7 +100,7 @@ export default function CharacterDetails ({charData}){
                     <p>{charData.backstory}</p>
                 </DescriptionDiv>
             </ContentDiv>
-            <Link to="/"><BackButton>Back</BackButton></Link>
+            <BackButton onClick={() => navigate(-1)}>Back</BackButton>
         </MainDiv>
     )
 }
