@@ -10,7 +10,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
 
   const [charData, setCharData] = useState({})
-
+  
+  console.log(charData);
   const Data = JSON.parse(localStorage.getItem("personaje"))
 
   
