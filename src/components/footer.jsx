@@ -15,7 +15,7 @@ export default function Footer(){
         justify-content: center;
         column-gap: 7rem;
         @media (max-width: 700px){
-            column-gap: 4rem;
+            column-gap: 3rem;
         }
         
         
@@ -28,8 +28,8 @@ export default function Footer(){
     `
     const ImgFooter = styled.img`
     width: 250px;
-    @media (max-width: 700px){
-        width: 65px;
+    @media (max-width: 640px){
+        width: 80%;
     }
 `
     return(

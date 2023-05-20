@@ -12,7 +12,6 @@ export default function CharacterDetails ({charData}){
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin: 1rem;
         align-items: center;
         
     `
