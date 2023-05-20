@@ -11,8 +11,7 @@ function App() {
 
   const [charData, setCharData] = useState({})
   
-  console.log(charData);
-  const Data = JSON.parse(localStorage.getItem("personaje"))
+  
 
   
   return (
@@ -20,7 +19,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/' element={<MainPage setCharData={setCharData}/>} />
-        <Route path={`/${Data.nombre}`} element={<CharacterDetails charData={Data}/>} />
+        <Route path={`/${charData.nombre}`} element={<CharacterDetails charData={charData}/>} />
         <Route path='/more' element={<SeeMore/>} />
       </Routes>
       <Footer/>

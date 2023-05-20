@@ -73,8 +73,6 @@ export default function CharacterCard({imagen, nombre, rol, backstory, setCharDa
                 <CharacterText>{rol}</CharacterText>
                 <Link to={`/${nombre}`}><DetailsButton onClick={() => {
                     setCharData({nombre, imagen, rol, backstory})
-                    const personaje = {nombre, imagen, rol, backstory}
-                    localStorage.setItem("personaje", JSON.stringify(personaje))
                 }}>Detalles</DetailsButton></Link>
             </CharacterInfo>
         </CharacterBox>
