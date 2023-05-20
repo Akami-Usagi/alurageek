@@ -15,14 +15,12 @@ export default function CharacterDetails ({charData}){
         align-items: center;
         
     `
-
     const Title = styled.h1`
         text-align: center;
         font-size: 40px;
         font-family: 'Exo 2', sans-serif;
         color: ${accentBlue};
     `
-
     const ContentDiv = styled.div`
         width: 70%;
         display: flex;
@@ -40,7 +38,6 @@ export default function CharacterDetails ({charData}){
             padding: initial;
         }
     `
-
     const CharImg = styled.img`
         width: 40%;
         border-radius: 20px;
@@ -55,7 +52,6 @@ export default function CharacterDetails ({charData}){
             text-align: center;
         }
     `
-
     const DescriptionDiv = styled.div`
         color: white;
         font-family: 'Exo 2', sans-serif;
@@ -68,7 +64,6 @@ export default function CharacterDetails ({charData}){
             font-size: initial;
         }
     `    
-
     const BackButton = styled.button`
             background-color: ${accentBlue};
             border: none;

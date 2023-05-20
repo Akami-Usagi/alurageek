@@ -9,6 +9,7 @@ export default function SeeMore(){
         display: flex;
         flex-direction: column;
         align-items: center;
+        min-height: 73.6vh;
     `
 
     const MoreDiv = styled.div`

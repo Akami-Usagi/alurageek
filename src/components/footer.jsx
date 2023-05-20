@@ -3,6 +3,9 @@ import styled from "styled-components"
 
 export default function Footer(){
 
+    
+    
+
     const BoxDivider = styled.div`
         width: 100%;
         height: fit-content;
